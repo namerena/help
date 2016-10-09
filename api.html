@@ -45,7 +45,7 @@
 
 <p>嵌入iframe时只需要在网址后面将对战者的名字用Base64编码加在url里就可以。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">run</span><span class="p">(</span><span class="nx">names</span><span class="p">){</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">run</span><span class="p">(</span><span class="nx">names</span><span class="p">){</span>
    <span class="kd">var</span> <span class="nx">base64</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">btoa</span><span class="p">(</span>
       <span class="nx">unescape</span><span class="p">(</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">names</span><span class="p">))</span>
    <span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\+</span><span class="sr">/g</span><span class="p">,</span><span class="s1">'-'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\/</span><span class="sr">/g</span><span class="p">,</span><span class="s1">'_'</span><span class="p">);</span>
@@ -60,7 +60,7 @@
 
 <p>可以在网页中监听message事件得到战斗结果。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onMessage</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onMessage</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">winners</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="nx">onMessage</span><span class="p">);</span>
@@ -88,8 +88,20 @@
             进入游戏
           </a>
 
+          <a href="http://www.weibo.com/rinick" class="link" target="_blank">
+            <div style="background-image: url(http://weibo.com/favicon.ico);"></div>
+            我的微博
+          </a>
+          <a href="https://github.com/rinick" class="link" target="_blank">
+            <div style="background-image: url(https://github.com/favicon.ico);"></div>
+            GitHub
+          </a>
+
         <ul>
-          <li><a href="index.html" >首页</a></li>
+
+          <li><a href="http://www.deepmess.com/" >首页</a></li>
+          <br/>
+          <li><a href="index.html" >名字竞技场</a></li>
           <br/>
           <li><a href="naming.html" >命名规则</a></li>
           <li><a href="attribute.html" >属性说明</a></li>

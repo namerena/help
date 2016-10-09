@@ -408,31 +408,31 @@ optgroup {
  */
 
 table {
-    border: none;
-    border-spacing: 0;
-    border-collapse: collapse;
-    display: block;
-    width: 100%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all;
+  border: none;
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
 }
 table th {
-    font-weight: bold;
+  font-weight: bold;
 }
 table th,
 table td {
-    padding: 6px 10px;
-    border: 1px solid #ddd;
-    word-break: break-all;
-    min-width: 64px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  word-break: break-all;
+  min-width: 64px;
 }
 table tr {
-    background-color: #fff;
-    border-top: 1px solid #ccc
+  background-color: #fff;
+  border-top: 1px solid #ccc
 }
 table tr:nth-child(2n) {
-    background-color: #f8f8f8
+  background-color: #f8f8f8
 }
 
 /* LAYOUT STYLES */
@@ -464,7 +464,7 @@ header {
   padding-top: 40px;
   padding-bottom: 40px;
   height: 20px;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
+  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat;
   border-bottom: solid 1px #275da1;
 }
 
@@ -501,7 +501,7 @@ header h2 {
   right:0;
   width:320px;
   height:100px;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
+  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat;
 }
 
 #content-wrapper {
@@ -539,11 +539,6 @@ aside#sidebar p.repo-owner a {
 }
 
 a.button {
-  width: 134px;
-  height: 58px;
-  padding-top: 22px;
-  padding-left: 68px;
-  
   font-size: 23px;
   line-height: 1.2;
   color: #fff;
@@ -559,12 +554,35 @@ header a.button {
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
 aside a.button {
+  height: 58px;
+  padding-top: 22px;
+
   display: block;
   width: 138px;
   padding-left: 64px;
   margin-bottom: 20px;
   font-size: 21px;
   background: transparent url(../images/download-button.png) 0 0 no-repeat;
+}
+
+aside a.link {
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 20px;
+  margin: 5px 0;
+  padding: 5px 5px 5px 30px;
+  font-size: 16px;
+  border: rgba(46,126,213,0.2) solid 1px;
+}
+aside a.link > div {
+  position: absolute;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  top:4px;
+  left:4px;
 }
 
 code, pre {
@@ -616,7 +634,7 @@ form {
 #main-content h1 {
   margin-top: 0;
   margin-bottom: 0;
-  
+
   font-size: 2.8em;
   font-weight: normal;
   color: #474747;
@@ -633,7 +651,7 @@ form {
 
 #main-content h2 {
   margin-bottom: 8px;
-  
+
   font-size: 22px;
   font-weight: bold;
   color: #474747;
@@ -642,14 +660,14 @@ form {
 #main-content h2:before {
   padding-right: 0.3em;
   margin-left: -1em;
-  content: "/";
+  content: "▓";
   color: #9ddcff;
 }
 
 #main-content h3 {
   margin-top: 24px;
   margin-bottom: 8px;
-  
+
   font-size: 18px;
   font-weight: bold;
   color: #474747;
@@ -665,7 +683,7 @@ form {
 
 #main-content h4 {
   margin-bottom: 8px;
-  
+
   font-size: 15px;
   font-weight: bold;
   color: #474747;
@@ -681,7 +699,7 @@ h4:before {
 
 #main-content h5 {
   margin-bottom: 8px;
-  
+
   font-size: 14px;
   color: #474747;
   text-indent: 3px;
@@ -695,7 +713,7 @@ h5:before {
 
 #main-content h6 {
   margin-bottom: 8px;
-  
+
   font-size: .8em;
   color: #474747;
   text-indent: 3px;
@@ -855,7 +873,7 @@ dl dd {
 @media only screen and (min-width: 480px) and (max-width: 767px) { }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) { 
+@media only screen and (max-width: 479px) {
   header h2 {
     display:none;
   }
